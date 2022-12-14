@@ -1,0 +1,29 @@
+.ul1{
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    gap: 20px;
+    margin-left: 2%;
+    margin-top: 2%;
+    /* align-items: center; */
+    /* justify-content: center; */
+}
+.ul2{
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    gap: 20px;
+    margin-right: 2%;
+    margin-top: 2%;
+    /* align-items: center;
+    justify-content: center; */
+}
+.container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+li{
+    align-items: center;
+    justify-content: center;
+}
