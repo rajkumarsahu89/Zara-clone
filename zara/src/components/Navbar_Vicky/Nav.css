@@ -4,7 +4,7 @@
     list-style: none;
     gap: 20px;
     margin-left: 2%;
-    margin-top: 2%;
+    margin-top: 1%;
     /* align-items: center; */
     /* justify-content: center; */
 }
@@ -14,7 +14,7 @@
     list-style: none;
     gap: 20px;
     margin-right: 2%;
-    margin-top: 2%;
+    margin-top: 1%;
     /* align-items: center;
     justify-content: center; */
 }
@@ -22,6 +22,9 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    position: sticky;
+    top:0;
+    color: blue;
 }
 li{
     align-items: center;
