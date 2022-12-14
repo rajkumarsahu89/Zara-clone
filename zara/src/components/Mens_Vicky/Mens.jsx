@@ -5,7 +5,7 @@ import Mens4 from './Mens4'
 
 function Mens() {
   return (
-    <div>
+    <div style={{ marginTop: '-100px' }}>
       <Mens1 />
       <Mens2 />
       <Mens4 />
