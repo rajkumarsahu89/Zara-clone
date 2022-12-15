@@ -2,7 +2,7 @@ import React from "react";
 
 function SliderContent({ activeIndex, sliderImage }) {
   return (
-    <section>
+    <section style={{display:"flex",flexDirection:"column"}}>
       {sliderImage.map((slide, index) => (
         <div style={{display:"flex",flexDirection:"column"}}
           key={index}
