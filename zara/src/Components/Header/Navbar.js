@@ -64,7 +64,7 @@ function Header({ page }) {
               <Image
                 w="200px"
                 className={page == 'home' ? theme.textColor == 'white' ? 'yourImage' : null : null}
-                src="ZaraPro.png"
+                src="https://logodownload.org/wp-content/uploads/2014/05/zara-logo-1.png"
                 filter={menuOpen ? "invert(0%)" : null}
               />
             </Link>
