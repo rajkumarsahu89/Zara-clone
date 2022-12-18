@@ -4,6 +4,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import { authLogout } from "../../Redux/auth/actions";
 import { getCart } from "../../Redux/cart/actions";
+import ZaraPro from "../Header/ZaraPro.jpg";
 const Cookies = require("js-cookie");
 
 function Header({ page }) {
@@ -62,9 +63,10 @@ function Header({ page }) {
             <Link to="/">
               {/* make image black to white */}
               <Image
-                w="200px"
+                w="250px"
+                h="100px"
                 className={page == 'home' ? theme.textColor == 'white' ? 'yourImage' : null : null}
-                src="ZaraPro.png"
+                src={ZaraPro}
                 filter={menuOpen ? "invert(0%)" : null}
               />
             </Link>
