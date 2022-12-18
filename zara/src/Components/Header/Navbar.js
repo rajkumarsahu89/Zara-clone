@@ -66,7 +66,11 @@ function Header({ page }) {
                 w="250px"
                 h="100px"
                 className={page == 'home' ? theme.textColor == 'white' ? 'yourImage' : null : null}
+
                 src={ZaraPro}
+
+              
+
                 filter={menuOpen ? "invert(0%)" : null}
               />
             </Link>

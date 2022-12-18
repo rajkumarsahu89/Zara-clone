@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom';
 import "./Login.css";
 import { useDispatch, useSelector } from 'react-redux';
-import { useToast } from '@chakra-ui/react';
+import { Grid, GridItem, useToast ,Center} from '@chakra-ui/react';
 import { authLogin } from '../../Redux/auth/actions';
 
 
@@ -46,26 +46,29 @@ const Login = () => {
         }
     }, [isAuthenticated, error]);
     return (
-        <>
-            <div className='main'>
+        <> <Center w="100vw">
+            <Grid className='main'>
 
-                <div className='block1'>
+                <GridItem className='block1'  width="70%">
                     <div className='h1'>LOG IN</div>
                     <input type="text" name='email' placeholder='E-MAIL' value={loginData.email} onChange={handleChange} /><br />
                     <input type="text" name='password' placeholder='PASSWORD' value={loginData.password} onChange={handleChange} /><br />
-                    <p>HAVE YOU FORGOTTEN YOUR PASSWORD?</p><br /><br />
+                    <p style={{fontSize:"10px"}}>HAVE YOU FORGOTTEN YOUR PASSWORD?</p><br /><br />
                     <button onClick={() => dispatch(authLogin(loginData))}>LOG IN</button>
-                </div>
-                <div className='block2'>
+                </GridItem>
+                <GridItem className='block2' width={"70%"} >
                     <h1 className='h2'>REGISTER</h1><br />
                     <h4>IF YOU STILL DON'T HAVE A <span style={{ fontWeight: "bolder" }}>ZARA.COM</span>  ACCOUNT, USE THIS OPTION TO ACCESS THE REGISTRATION FORM.</h4><br />
                     <h4>BY GIVING US YOUR DETAILS, PURCHASING IN <span style={{ fontWeight: "bolder" }}>ZARA.COM</span> WILL BE FASTER AND AN ENJOYABLE EXPERIENCE.</h4><br /><br />
-                    <Link to='/register'><button>CREATE ACCOUNT</button></Link>
-                </div>
-            </div>
+                    <Link to='/register'><button style={{width:"100%",marginTop:"30px"}}>CREATE ACCOUNT</button></Link>
+                </GridItem>
+            </Grid>
+            </Center>
+            <Center w="100vw">
             <div className='bottom'>
-                <div>
-                    <h3>HELP</h3>
+                <Grid className='projects_grid'>  
+                <GridItem >
+                    <h3> HELP</h3>
                     <p>SHOP AT ZARA.COM</p>
                     <p>PRODUCT</p>
                     <p>GIFT CARD</p>
@@ -75,8 +78,8 @@ const Login = () => {
                     <p>SHOPS AND COMPANY</p>
                     <p>CLOTHES COLLECTION PROGRAMME</p>
                     <p>MY ACCOUNT</p>
-                </div>
-                <div>
+                </GridItem>
+                <GridItem>
                     <h3>FOLLOW US</h3>
                     <p>NEWSLETTER</p>
                     <p>INSTAGRAM</p>
@@ -84,32 +87,39 @@ const Login = () => {
                     <p>TWITTER</p>
                     <p>PINTREST</p>
                     <p>YOUTUBE</p>
-                </div>
-                <div>
+                </GridItem>
+                <GridItem>
                     <h3>COMPANY</h3>
                     <p>ABOUT US</p>
                     <p>JOIN LIFE</p>
                     <p>OFFICES</p>
                     <p>STORIES</p>
                     <p>WORK WITH US</p>
-                </div>
-                <div>
+                </GridItem>
+                <GridItem>
                     <h3>POLICIES</h3>
                     <p>PRIVACY POLICY</p>
                     <p>PURCHASING CONDITIONS</p>
                     <p>GIFT CARD CONDITIONS</p>
                     <p>COOKIES SETTINGS</p>
-                </div>
+                </GridItem>
+                </Grid>
             </div>
-            <div className='line'>
+            
+            </Center >
+            <Center width="100vw">
+                <Grid className='main' >
+            <GridItem className='line'>
                 <p>INDIA</p>
                 <p>ENGLISH  © ALL RIGHTS RESERVED</p>
-            </div>
-            <div className='bot2'>
+            </GridItem>
+            <GridItem className='bot2'>
                 <p>NAME AND ADDRESS OF THE MANUFACTURER:</p>
                 <p>INDUSTRIA DE DISEÑO TEXTIL, S.A. (INDITEX, S.A.)</p>
                 <p>AVENIDA DE LA DIPUTACIÓN, EDIFICIO INDITEX, 15143, ARTEIXO (A CORUÑA), SPAIN</p>
-            </div>
+            </GridItem>
+            </Grid>
+            </Center>
         </>
     )
 }
