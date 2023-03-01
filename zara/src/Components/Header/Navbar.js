@@ -21,7 +21,6 @@ function Header({ page }) {
       if (window.scrollY > 120) {
         setNavbar(true);
       }
-
       if (window.scrollY === 0) {
         setNavbar(false);
         setIsOpen(false);
@@ -63,14 +62,10 @@ function Header({ page }) {
             <Link to="/">
               {/* make image black to white */}
               <Image
-                w="250px"
-                h="100px"
+                w="100px"
+                h="50px"
                 className={page == 'home' ? theme.textColor == 'white' ? 'yourImage' : null : null}
-
                 src={ZaraPro}
-
-              
-
                 filter={menuOpen ? "invert(0%)" : null}
               />
             </Link>
@@ -90,13 +85,13 @@ function Header({ page }) {
               SEARCH
             </Text>
           </Link>
-          <Box gap="6" display={{ base: "none", md: "flex" }}>
+          <Box gap="6" display={{ base: "flex", md: "flex" }}>
             <Link to={isAuthenticated ? null : "/login"}>
               <Text fontSize="sm" onClick={isAuthenticated ? () => {dispatch(authLogout()); dispatch(getCart())} : null} color={page == 'home' ? theme.textColor : 'black'} >
                 {isAuthenticated ? user.name.toUpperCase() : "LOGIN"}
               </Text>
             </Link>
-            <Text color={page == 'home' ? theme.textColor : 'black'}  fontSize="sm">HELP</Text>
+           
           </Box>
           <Link to="/cart">
             <Box mx='7'>

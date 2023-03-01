@@ -1,4 +1,4 @@
-const img1 = "./home/img1.jpg"
+const img1 = "./home/img.jpg"
 const img2 = "./home/img2.jpg"
 const img3 = "./home/img3.jpg"
 const img4 = "./home/img4.jpg"

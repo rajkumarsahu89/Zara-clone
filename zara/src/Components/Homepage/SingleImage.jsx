@@ -22,9 +22,7 @@ export default function SigngleImage({ el, isup, cindex, images, toggle, links }
             width="100%" height="100%" >
             <source src={el.item} type="video/mp4" />
          </motion.video>
-
       }
-
       {cindex !== (images.length - 1) && <Links links={links} />}
       {cindex === (images.length - 1) && <Footer />}
    </Box>

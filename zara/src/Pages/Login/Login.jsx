@@ -5,16 +5,12 @@ import { useDispatch, useSelector } from 'react-redux';
 import { Grid, GridItem, useToast ,Center} from '@chakra-ui/react';
 import { authLogin } from '../../Redux/auth/actions';
 
-
 const Login = () => {
-
     const [loginData, setLoginData] = React.useState({ email: '', password: '' });
-
     const handleChange = (e) => {
         const { name, value } = e.target;
         setLoginData({ ...loginData, [name]: value });
     }
-
     const dispatch = useDispatch();
     const toast = useToast();
     const navigate = useNavigate();
